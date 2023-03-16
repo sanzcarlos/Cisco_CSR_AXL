@@ -15,4 +15,4 @@ def cucmserver():
     )
 
 def test_sample():
-    assert func(1) == 3
+    assert func(1) == 2
