@@ -1,15 +1,22 @@
 import logging
+import os
 import signal
 import sys
 import time
 import urllib3
 import uuid
 
+# Define Working DIrectory for logging
+if ("cisco_collaboration" in os.getcwd()):
+    path = "../log/"
+else:
+    path = "log/"
+
 # Define the logging global settings
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)-18s | %(filename)-18s:%(lineno)-4s | %(levelname)-9s | %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
-                    filename='../log/' + time.strftime("%Y%m%d-%H%M%S-") + str(uuid.uuid4()) + '.log',
+                    filename= path + time.strftime("%Y%m%d-%H%M%S-") + str(uuid.uuid4()) + '.log',
                     filemode='w',
                     )
 logger = logging.getLogger('cisco.cucm.axl.zeep')
