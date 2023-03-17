@@ -1,8 +1,8 @@
 # content of test_sample.py
 import pytest
 
-def func(x):
-    return x + 1
+def func(a,b):
+    return a + b
 
 @pytest.fixture()
 def cucmserver():
@@ -13,5 +13,12 @@ def cucmserver():
         version="12.5",
     )
 
-def test_sample():
-    assert func(1) == 2
+@pytest.mark.test
+@pytest.mark.parametrize("a,b,expected_result",[(1,2,3),(5,6,11)])
+def test_sample(a,b,expected_result):
+    assert func(a,b) == expected_result
+
+@pytest.mark.slow
+@pytest.mark.parametrize("a,expected_result",[(1,2),(5,6)])
+def test_sample2(a,expected_result):
+    assert func(a,1) == expected_result
