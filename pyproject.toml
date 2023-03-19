@@ -3,4 +3,4 @@ markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
     "test: marks tests as test (select with '-m test')",
 ]
-addopts = "--verbose"
+addopts = "--verbose -rsxX -l --tb=short --strict-markers"

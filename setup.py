@@ -20,6 +20,3 @@ setup(
     license=license,
     packages=find_packages(exclude=('tests', 'docs'))
 )
-
-[tool:pytest]
-addopts = -rsxX -l --tb=short --strict
