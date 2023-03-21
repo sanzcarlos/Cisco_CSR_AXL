@@ -1,6 +1,7 @@
 [tool.pytest.ini_options]
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "detail: marks tests as detail (deselect with '-m \"not detail\"')",
     "test: marks tests as test (select with '-m test')",
 ]
 addopts = "--verbose -rsxX -l --tb=short --strict-markers"

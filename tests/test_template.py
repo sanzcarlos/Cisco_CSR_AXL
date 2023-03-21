@@ -8,9 +8,9 @@ def func(a,b):
 @pytest.fixture()
 def cucmserver():
     return cucm(
-        cucmserver="192.168.80.230",
-        username="ccmadministrator",
-        password="NTTvoip2020.",
+        cucmserver="ip_address",
+        username="username",
+        password="password",
         version="12.5",
     )
 
