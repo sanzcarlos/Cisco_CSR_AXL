@@ -27,6 +27,9 @@ import time
 import urllib3
 import uuid
 
+from dotenv import load_dotenv
+
+
 # Define Working DIrectory for logging
 if ("cisco_collaboration" in os.getcwd()):
     path = "../log/"
