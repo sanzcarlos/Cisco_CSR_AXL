@@ -22,7 +22,6 @@ def check_ipaddress(ip):
 @pytest.fixture()
 def cucmserver():
     settings = dotenv_values()
-    print(settings)
     return settings
 
 
