@@ -9,5 +9,5 @@
 
 configobj==5.0.8
 prettytable==3.6.0
-urllib3==1.26.14
+urllib3==1.26.18
 zeep==4.2.1
